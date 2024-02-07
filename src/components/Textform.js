@@ -61,8 +61,10 @@ export default function Textform(prop) {
     }
 
     const copy = () => {
+
       prop.showAlert("copy Text", "success")
       navigator.clipboard.writeText(text)
+      
     }
     const [text, setText] = useState("")
     let disable = text === ""?true:false;
