@@ -4,6 +4,7 @@ import React  from 'react'
 
 
 export default function Textform(prop) {
+  
     const handleUpClick  = ()=>{
         // console.log("upperCase")
         prop.showAlert("UpperCase Text", "success")
@@ -64,6 +65,7 @@ export default function Textform(prop) {
       navigator.clipboard.writeText(text)
     }
     const [text, setText] = useState("")
+    let disable = text === ""?true:false;
   return (
     <>
     
@@ -73,14 +75,14 @@ export default function Textform(prop) {
           <textarea className="form-control" style={{backgroundColor : prop.mode === 'dark'? 'black':'white', color:prop.mode === 'dark'? 'white':"black"}} id="Mybox" onChange={handleOnchange} value={text} rows="14"></textarea>
           </div>
 
-          <button className="btn btn-primary mx-2"   onClick={handleUpClick}>Convert to upper</button>
+          <button className="btn btn-primary mx-2" disabled={disable}  onClick={handleUpClick}>Convert to upper</button>
 
-          <button className="btn btn-primary mx-2"  onClick={handledownClick}>Convert to lowerr</button>
+          <button className="btn btn-primary mx-2" disabled={disable} onClick={handledownClick}>Convert to lowerr</button>
           
-          <button className="btn btn-primary mx-2 my-2 "   onClick={alternative}>Alternative text</button>
-          <button className="btn btn-primary mx-2 my-2"  onClick={captiallize}>captiallize text</button>
-          <button className="btn btn-primary mx-2 my-2"  onClick={copy}>Copy text</button>
-          <button className="btn btn-primary mx-2 my-2"  onClick={cleartext}>Clear Text</button>
+          <button className="btn btn-primary mx-2 my-2 " disabled={disable}  onClick={alternative}>Alternative text</button>
+          <button className="btn btn-primary mx-2 my-2" disabled={disable} onClick={captiallize}>captiallize text</button>
+          <button className="btn btn-primary mx-2 my-2" disabled={disable} onClick={copy}>Copy text</button>
+          <button className="btn btn-primary mx-2 my-2" disabled={disable} onClick={cleartext}>Clear Text</button>
       </div>
       
       <div className="container my-2" style={{color : prop.mode === 'light'? 'black':'white'}}>
@@ -88,7 +90,7 @@ export default function Textform(prop) {
         <p>{text.split(" ").filter((ele) => {return ele.length!==0}).length} words, {text.length} characters</p>
         <p> Time to read the text is {text.split(" ").filter((ele) => {return ele.length!==0}).length*0.008} minutes </p>
         <h2>Preview</h2>
-        <p>{text === ""? "Enter your text": text}</p>
+        <p>{text === ""? "Nothing to priview": text}</p>
 
 
       </div>

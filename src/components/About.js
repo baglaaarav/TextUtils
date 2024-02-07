@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function About(props) {
   // const [mystyle, setstyke] = useState({
@@ -8,7 +8,9 @@ export default function About(props) {
   
 let mystyle = {
   color: props.mode==='light'?"black":"white",
-  backgroundColor: props.mode === "dark"?"black":"white"
+  backgroundColor: props.mode === "dark"?"black":"white",
+  // border:'1px solid', 
+  borderRadius: '2px'
 }
 
   return (
@@ -61,7 +63,7 @@ let mystyle = {
             className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body">
+            <div className="accordion-body" style={mystyle}>
               TextUtils is a free character counter tool that
               provides instant character count & word count statistics for a
               given text. TextUtils reports the number of words and characters.
@@ -88,6 +90,7 @@ let mystyle = {
             id="collapseThree"
             className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
+            style={mystyle}
           >
             <div className="accordion-body">
               Browser CompatibleThis word counter software works in any web
