@@ -64,7 +64,7 @@ export default function Textform(prop) {
 
       prop.showAlert("copy Text", "success")
       navigator.clipboard.writeText(text)
-      
+
     }
     const [text, setText] = useState("")
     let disable = text === ""?true:false;
@@ -89,8 +89,8 @@ export default function Textform(prop) {
       
       <div className="container my-2" style={{color : prop.mode === 'light'? 'black':'white'}}>
         <h1>Your Text Summary</h1>
-        <p>{text.split(" ").filter((ele) => {return ele.length!==0}).length} words, {text.length} characters</p>
-        <p> Time to read the text is {text.split(" ").filter((ele) => {return ele.length!==0}).length*0.008} minutes </p>
+        <p>{text.split(/\s+/).filter((ele) => {return ele.length!==0}).length} words, {text.length} characters</p>
+        <p> Time to read the text is {text.split(/\s+/).filter((ele) => {return ele.length!==0}).length*0.008} minutes </p>
         <h2>Preview</h2>
         <p>{text === ""? "Nothing to priview": text}</p>
 
