@@ -2,10 +2,10 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import Textform from "./components/Textform";
 // import { useState } from "react";
-import About from "./components/About";
+// import About from "./components/About";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const [mode, changemode] = useState("light");
@@ -36,26 +36,26 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router> */}
 
      
         <Navbar title="TextUtils" mode={mode} toggle={toggle} />
         <Alert alert={alert} />
         <div className="container">
-          <Routes>  
+          {/* <Routes>  
             <Route exact path="/About" element={<About />}>
               
-            </Route>
+            </Route> */}
             
-              <Route exact path="/" element={<Textform showAlert={showAlert} heading="Enter Your Text To Analyze" mode={mode}/>}>
+              {/* <Route exact path="/" element={<Textform showAlert={showAlert} heading="Enter Your Text To Analyze" mode={mode}/>}> */}
               
-            </Route>
+            {/* </Route> */}
 
-          </Routes>
+          {/* </Routes> */}
 
-        
+          <Textform showAlert={showAlert} heading="Enter Your Text To Analyze" mode={mode}/>
         </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
