@@ -19,7 +19,19 @@ function App() {
     }, 15000);
   };
 
-  const toggle = () => {
+
+  function removeBodyclass(){
+    document.body.classList.remove('bg-light')
+    document.body.classList.remove('bg-dark')
+    document.body.classList.remove('bg-primary')
+    document.body.classList.remove('bg-danger')
+    document.body.classList.remove('bg-sucess')
+    document.body.classList.remove('bg-warning')
+  }
+
+  const toggle = (cls) => {
+    removeBodyclass();
+    document.body.classList.add('bg-'+cls)
     if (mode === "light") {
       changemode("dark");
       document.body.style.backgroundColor = "#042743";
