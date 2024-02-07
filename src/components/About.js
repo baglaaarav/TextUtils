@@ -1,28 +1,15 @@
 import React, { useState } from "react";
 
-export default function About() {
-  const [mystyle, setstyke] = useState({
-    color: "black",
-    backgroundColor: "white",
-  });
-  const [text, settext] = useState("dark");
-
-  const onclickd = () => {
-    if (mystyle.color === "white") {
-      setstyke({
-        color: "black",
-        backgroundColor: "white",
-      });
-      settext("dark");
-    } else {
-      setstyke({
-        color: "white",
-        backgroundColor: "black",
-        boder: "2px solid white",
-      });
-      settext("light");
-    }
-  };
+export default function About(props) {
+  // const [mystyle, setstyke] = useState({
+  //   color: "black",
+  //   backgroundColor: "white",
+  // });
+  
+let mystyle = {
+  color: props.mode==='light'?"black":"white",
+  backgroundColor: props.mode === "dark"?"black":"white"
+}
 
   return (
     <div className="container" style={mystyle}>
@@ -111,11 +98,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="container  my-3 mx-3">
-        <button type="button" className="btn btn-primary" onClick={onclickd}>
-          Enable {text} Mode
-        </button>
-      </div>
+      
     </div>
   );
 }
