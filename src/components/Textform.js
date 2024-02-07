@@ -5,7 +5,7 @@ import React  from 'react'
 
 export default function Textform(prop) {
     const handleUpClick  = ()=>{
-        console.log("upperCase")
+        // console.log("upperCase")
         prop.showAlert("UpperCase Text", "success")
         let te = text.toUpperCase();
 
@@ -17,7 +17,7 @@ export default function Textform(prop) {
       setText(te);
     }
     const handleOnchange  = (event)=>{
-        console.log("handleOnchange")
+        // console.log("handleOnchange")
         
         setText(event.target.value)
     }
@@ -85,8 +85,8 @@ export default function Textform(prop) {
       
       <div className="container my-2" style={{color : prop.mode === 'light'? 'black':'white'}}>
         <h1>Your Text Summary</h1>
-        <p>{text.split(" ").length-1} words, {text.length} characters</p>
-        <p> Time to read the text is {text.split(" ").length*0.008 - 0.008} minutes </p>
+        <p>{text.split(" ").filter((ele) => {return ele.length!==0}).length} words, {text.length} characters</p>
+        <p> Time to read the text is {text.split(" ").filter((ele) => {return ele.length!==0}).length*0.008} minutes </p>
         <h2>Preview</h2>
         <p>{text === ""? "Enter your text": text}</p>
 
