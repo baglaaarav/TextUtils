@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/TextUtils.git/static/css/main.e6c13ad2.css",
-    "main.js": "/TextUtils.git/static/js/main.d78feed2.js",
-    "static/js/787.d4aba7ab.chunk.js": "/TextUtils.git/static/js/787.d4aba7ab.chunk.js",
-    "index.html": "/TextUtils.git/index.html",
-    "main.e6c13ad2.css.map": "/TextUtils.git/static/css/main.e6c13ad2.css.map",
-    "main.d78feed2.js.map": "/TextUtils.git/static/js/main.d78feed2.js.map",
-    "787.d4aba7ab.chunk.js.map": "/TextUtils.git/static/js/787.d4aba7ab.chunk.js.map"
+    "main.css": "/TextUtils/static/css/main.e6c13ad2.css",
+    "main.js": "/TextUtils/static/js/main.8f6ff275.js",
+    "static/js/787.d4aba7ab.chunk.js": "/TextUtils/static/js/787.d4aba7ab.chunk.js",
+    "index.html": "/TextUtils/index.html",
+    "main.e6c13ad2.css.map": "/TextUtils/static/css/main.e6c13ad2.css.map",
+    "main.8f6ff275.js.map": "/TextUtils/static/js/main.8f6ff275.js.map",
+    "787.d4aba7ab.chunk.js.map": "/TextUtils/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.d78feed2.js"
+    "static/js/main.8f6ff275.js"
   ]
 }
